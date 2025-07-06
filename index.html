@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get $1000 Walmart Gift Card Now!</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/1024px-Walmart_logo.svg.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0071ce, #ffc220);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #0071ce;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gift-card {
+            max-width: 500px;
+            margin: 30px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 5px solid #ffc220;
+            position: relative;
+        }
+
+        .gift-card img {
+            width: 100%;
+            display: block;
+        }
+
+        .gift-card .amount {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #0071ce;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .benefit-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: left;
+            border-left: 4px solid #0071ce;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .benefit-card h3 {
+            color: #0071ce;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffc220;
+            color: #333;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 700;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: #ffb300;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover:before {
+            left: 100%;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            background: #f8f9fa;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .activity-feed {
+            position: fixed;
+            top: 20px;
+            left: -100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: slideInRight 0.5s ease-out forwards, fadeOut 0.5s ease-out 4.5s forwards;
+            z-index: 1000;
+            font-size: 0.9em;
+            border-left: 4px solid #ffc220;
+        }
+
+        @keyframes slideInRight {
+            from { left: -100%; opacity: 0; }
+            to { left: 20px; opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        .activity-feed p {
+            margin: 0;
+            color: #333;
+        }
+
+        .activity-feed .amount {
+            color: #0071ce;
+            font-weight: 600;
+        }
+
+        .counter {
+            background: #0071ce;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .ad-container {
+            width: 100%;
+            max-width: 728px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .ad-banner {
+            width: 100%;
+            min-height: 90px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-badges {
+                gap: 15px;
+            }
+
+            .gift-card .amount {
+                font-size: 1.8em;
+                padding: 10px 20px;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+
+            .ad-banner {
+                min-height: 60px;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: #ffc220;
+            border-radius: 50%;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <div class="hero">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/1024px-Walmart_logo.svg.png" alt="Walmart Logo" class="logo">
+            <h1>Claim Your $1000 Walmart Gift Card!</h1>
+            <p class="subtitle">Join thousands of winners who are shopping for free at Walmart with their gift cards</p>
+            
+            <div class="counter">
+                <span id="claim-counter">1247</span> Gift Cards Claimed Today!
+            </div>
+            
+            <div class="gift-card pulse">
+                <img src="https://images.ctfassets.net/5de70he6op10/2xifr2LmR4N4Xh8k9kGZxZ/3f9e9f0e3a1a8d3b8e3d2b2e3a2b2e3a/Walmart_eGift.jpg" alt="Walmart Gift Card">
+                <div class="amount">$1000</div>
+            </div>
+
+            <div class="benefits">
+                <div class="benefit-card">
+                    <h3>🛒 Shop Everything</h3>
+                    <p>Use your gift card on millions of products at Walmart stores and online</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>⚡ Instant Delivery</h3>
+                    <p>Receive your e-gift card via email immediately after claiming</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🔒 100% Secure</h3>
+                    <p>Protected by Walmart's secure payment systems</p>
+                </div>
+            </div>
+
+            <button onclick="openAffiliateLink()" class="cta-button">GET YOUR GIFT CARD NOW</button>
+
+            <div class="trust-badges">
+                <div class="trust-badge">✓ Official Partner</div>
+                <div class="trust-badge">🔒 Walmart Verified</div>
+                <div class="trust-badge">⭐ 4.8/5 Customer Rating</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Ad 1 -->
+    <div class="ad-container">
+        <div class="ad-banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '713e49d7d11216cfbc75d49fb7efb8a1',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/713e49d7d11216cfbc75d49fb7efb8a1/invoke.js"></script>
+        </div>
+    </div>
+    
+    <!-- Banner Ad 2 -->
+    <div class="ad-container">
+        <div class="ad-banner">
+            <script async="async" data-cfasync="false" src="//pl26965857.profitableratecpm.com/1800e0cc09c719aff76fdb74d30ab754/invoke.js"></script>
+            <div id="container-1800e0cc09c719aff76fdb74d30ab754"></div>
+        </div>
+    </div>
+
+    <script>
+        // Create animated stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 50;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random position and size
+                const size = Math.random() * 3 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                // Random animation duration
+                star.style.setProperty('--duration', `${Math.random() * 3 + 2}s`);
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Simulate gift card claims
+        function showRandomWithdrawal() {
+            const names = ['Sarah', 'Michael', 'Jennifer', 'David', 'Lisa', 'James', 'Emily', 'Robert', 'Jessica', 'John'];
+            const amounts = Array.from({length: 10}, (_, i) => 200 + (i * 100)); // $200-$1000
+
+            function createNotification() {
+                const name = names[Math.floor(Math.random() * names.length)];
+                const amount = amounts[Math.floor(Math.random() * amounts.length)];
+                
+                const notification = document.createElement('div');
+                notification.className = 'activity-feed';
+                notification.innerHTML = `<p><span class="amount">$${amount}</span> Walmart Card claimed by ${name}!</p>`;
+
+                document.body.appendChild(notification);
+                
+                // Update counter
+                const counter = document.getElementById('claim-counter');
+                counter.textContent = parseInt(counter.textContent) + 1;
+                
+                setTimeout(() => notification.remove(), 5000);
+            }
+
+            createNotification();
+            setInterval(createNotification, 7000);
+        }
+
+        // Counter animation
+        function animateCounter() {
+            const counter = document.getElementById('claim-counter');
+            let count = parseInt(counter.textContent);
+            
+            setInterval(() => {
+                count += Math.floor(Math.random() * 3) + 1;
+                counter.textContent = count;
+            }, 30000);
+        }
+
+        function openAffiliateLink() {
+            // Show loading animation
+            const button = document.querySelector('.cta-button');
+            button.innerHTML = 'Processing...';
+            button.style.opacity = '0.8';
+            
+            setTimeout(() => {
+                window.location.href = 'https://cghecba.smartoffers365.com/c/a81cdb16cc628';
+            }, 1500);
+        }
+
+        // Initialize everything
+        window.onload = function() {
+            createStars();
+            showRandomWithdrawal();
+            animateCounter();
+            
+            // Make gift card pulse continuously
+            setInterval(() => {
+                document.querySelector('.gift-card').classList.toggle('pulse');
+            }, 4000);
+        };
+    </script>
+</body>
+</html>
